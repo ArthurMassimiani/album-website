@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    background-color: #000; /* Black background */
+    position: relative;
+    transition: background-color 2s ease; /* Transition for background color */
+}
+
+.corner-text {
+    position: absolute;
+    color: #fff; /* White text */
+    font-size: 32px; /* Increase font size */
+}
+
+#top-left {
+    top: 40px;
+    left: 40px;
+}
+
+#top-right {
+    top: 40px;
+    right: 40px;
+}
+
+#bottom-left {
+    bottom: 40px;
+    left: 40px;
+}
+
+#bottom-right {
+    bottom: 40px;
+    right: 40px;
+}
+
+.middle-text {
+    position: absolute;
+    color: #fff; /* White text */
+    font-size: 32px; /* Increase font size */
+    width: 100%;
+    text-align: center;
+}
+
+#middle-top {
+    top: 10px; /* Adjust as needed */
+}
+
+#middle-bottom {
+    bottom: 10px; /* Adjust as needed */
+}
+
+#middle-left {
+    left: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#middle-right {
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+canvas {
+    background-color: #000; /* Black background */
+    border: 5px solid #fff; /* White border */
+    width: 500px; /* Fixed canvas width */
+    height: 500px; /* Fixed canvas height */
+    position: absolute;
+}
+
+.success-text {
+    color: #fff; /* White text */
+    font-size: 32px; /* Larger font size */
+    text-align: center;
+}
+
+.failure-text {
+    color: #fff; /* White text */
+    font-size: 32px; /* Larger font size */
+    text-align: center;
+}
+
+.main-text {
+    color: #fff; /* White text */
+    font-size: 3rem; /* 1.5x larger than sub-text */
+    text-align: center;
+    opacity: 0; /* Start with text invisible */
+}
+
+.sub-text {
+    color: #fff; /* White text */
+    font-size: 2rem; /* Base font size */
+    text-align: center;
+    opacity: 0; /* Start with text invisible */
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    35% { opacity: 1; }
+    65% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.next-page-text {
+    color: #fff; /* White text */
+    font-size: 3rem; /* Adjust font size as needed */
+    text-align: center;
+    opacity: 0; /* Start with text invisible */
+    animation: fadeIn 7s forwards; /* 7-second fade-in animation */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-to-black {
+    background-color: #000 !important; /* Fade to black background */
+    transition: background-color 7s ease; /* 7-second transition */
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
