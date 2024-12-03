@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>end of the world</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="next-page-text">end of the world</h1>
+    <audio id="audio3" src="endofworld.wav" autoplay></audio>
+    <script>
+        const audio3 = document.getElementById('audio3');
+        const colors3 = ['black', 'darkblue', 'gray'];
+        let i3 = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors3[i3];
+            i3 = (i3 + 1) % colors3.length;
+        }, 1000); // Rotate every second
+        audio3.addEventListener('ended', function () {
+            document.body.classList.add('fade-out');
+            setTimeout(function () {
+                window.location.href = 'nextpage4.html';
+            }, 2000); // 2-second fade-out duration
+        });
+    </script>
+</body>
+</html>

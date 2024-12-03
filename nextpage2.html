@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just like me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="next-page-text">just like me</h1>
+    <audio id="audio2" src="justlikeme.wav" autoplay></audio>
+    <script>
+        const audio2 = document.getElementById('audio2');
+        const colors2 = ['darkgray', 'darkred', 'black'];
+        let i2 = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors2[i2];
+            i2 = (i2 + 1) % colors2.length;
+        }, 1000); // Rotate every second
+        audio2.addEventListener('ended', function () {
+            document.body.classList.add('fade-out');
+            setTimeout(function () {
+                window.location.href = 'nextpage3.html';
+            }, 2000); // 2-second fade-out duration
+        });
+    </script>
+</body>
+</html>

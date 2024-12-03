@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salvation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="next-page-text">salvation</h1>
+    <audio id="audio6" src="salvation.mp3" autoplay></audio>
+    <script>
+        const audio6 = document.getElementById('audio6');
+        const colors6 = ['gold', 'lightblue', 'purple'];
+        let i6 = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors6[i6];
+            i6 = (i6 + 1) % colors6.length;
+        }, 1000); // Rotate every second
+        audio6.addEventListener('ended', function () {
+            document.body.classList.add('fade-out');
+            setTimeout(function () {
+                window.location.href = 'nextpage7.html';
+            }, 2000); // 2-second fade-out duration
+        });
+    </script>
+</body>
+</html>

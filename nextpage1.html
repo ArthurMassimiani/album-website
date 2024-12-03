@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34 degrees</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="next-page-text">34 degrees</h1>
+    <audio id="audio1" src="34degrees.mp3" autoplay></audio>
+    <script>
+        const audio1 = document.getElementById('audio1');
+        const colors1 = ['red', 'orange', 'yellow'];
+        let i1 = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors1[i1];
+            i1 = (i1 + 1) % colors1.length;
+        }, 1000); // Rotate every second
+        audio1.addEventListener('ended', function () {
+            document.body.classList.add('fade-out');
+            setTimeout(function () {
+                window.location.href = 'nextpage2.html';
+            }, 2000); // 2-second fade-out duration
+        });
+    </script>
+</body>
+</html>

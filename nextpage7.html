@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psalm 23</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="next-page-text">psalm 23</h1>
+    <audio id="audio7" src="psalm23.mp3" autoplay></audio>
+    <script>
+        const audio7 = document.getElementById('audio7');
+        const colors7 = ['lightblue', 'lightgreen', 'lavender'];
+        let i7 = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors7[i7];
+            i7 = (i7 + 1) % colors7.length;
+        }, 1000); // Rotate every second
+        audio7.addEventListener('ended', function () {
+            document.body.classList.add('fade-out');
+            setTimeout(function () {
+                window.location.href = 'finalpage.html';
+            }, 2000); // 2-second fade-out duration
+        });
+    </script>
+</body>
+</html>
